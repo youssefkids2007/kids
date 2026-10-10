@@ -1,0 +1,9 @@
+Options -Indexes
+RewriteEngine On
+
+# Route /api/mayhem/KeyboardAuth to its PHP handler.
+RewriteRule ^api/mayhem/KeyboardAuth/?$ api/mayhem/KeyboardAuth/index.php [L,QSA]
+
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
